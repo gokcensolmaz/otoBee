@@ -1,0 +1,234 @@
+
+ html {
+    overflow: auto;
+    font-size: 62.5%;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'paragraphFont';
+    src: url(../assets/fonts/montserrat.ttf);
+}
+
+@font-face {
+    font-family: 'mainFont';
+    src: url(../assets/fonts/tenorsans.ttf);
+}
+
+@font-face {
+    font-family: 'TeslaFont';
+    src: url(../assets/fonts/teslaFont.ttf);
+}
+
+@font-face {
+    font-family: 'PorscheFont';
+    src: url(../assets/fonts/porscheFont.ttf);
+}
+
+@font-face {
+    font-family: 'MaseratiFont';
+    src: url(../assets/fonts/maseratiFont.otf);
+}
+
+@font-face {
+    font-family: 'JaguarFont';
+    src: url(../assets/fonts/jaguarFont.ttf);
+}
+
+/* Body */
+body {
+    overflow: auto;
+    position: relative;
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body::after {
+    content: "";
+    background-image: url("../assets/images/marble_bg.svg");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.overlay {
+    opacity: 0.5;
+}
+
+/* Header */
+header {
+    background-color: black;
+    opacity: 1;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+header a img {
+    margin: 0em 3em;
+}
+
+nav {
+    margin: 4em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: mainFont;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid white;
+    bottom: -6px;
+}
+
+
+nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(122, 122, 122);
+    bottom: -6px;
+    transition: width .3s;
+}
+
+/* Main */
+
+main {
+    gap: 8em;
+    margin-top: 1em;
+}
+
+
+/* Slides */
+.slide-container {
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+/* Brand Texts*/
+.tesla {
+    color: #f2f2f2;
+    font-size: 200px;
+    font-family: TeslaFont;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.porsche {
+    color: #f2f2f2;
+    font-size: 150px;
+    font-family: PorscheFont;
+    opacity: 0.5;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.maserati {
+    color: #f2f2f2;
+    font-size: 150px;
+    font-family: MaseratiFont;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.jaguar {
+    color: #f2f2f2;
+    font-size: 200px;
+    font-family: JaguarFont;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.car-container {
+    position: relative;
+    width: 200px;
+    height: 100px;
+}
+
+.car {
+    position: absolute;
+    top: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.car1 {
+    left: 50px;
+}
+
+.car2 {
+    left: 250px;
+}
+
+.car3 {
+    left: 450px;
+}
+
+.car4 {
+    left: 650px;
+}
+
+.car:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    opacity: 1;
+}
+
+
+/* Slide Dots*/
+
+.slideNav {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+}
+
+span.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Microinteractions */
+
+nav ul li a:hover:before {
+    width: 35%;
+}

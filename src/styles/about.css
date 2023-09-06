@@ -1,0 +1,37 @@
+
+body, html {
+    overflow: auto;
+}
+/* Fonts */
+@font-face {
+    font-family: 'paragraphFont';
+    src: url(../assets/fonts/montserrat.ttf);
+}
+
+@font-face {
+    font-family: 'mainFont';
+    src: url(../assets/fonts/tenorsans.ttf);
+}
+.wrapper{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 8em;
+    margin-top: 8em;
+}
+
+
+.left-col h1 {
+    color: white;
+    font-family: mainFont;
+    font-size: 5.2rem;
+    text-align: center;
+}
+
+.left-col p {
+    color: white;
+    font-family: paragraphFont;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: center;
+}

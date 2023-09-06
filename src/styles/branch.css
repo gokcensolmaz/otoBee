@@ -1,0 +1,113 @@
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    position: relative;
+}
+
+.map-image {
+    width: 900px;
+    height: 450px;
+    padding: 0;
+    display: block;
+    margin-left: 0;
+    margin-right: 100px;  /* Adjust as necessary */
+}
+
+.ankara {
+    position: absolute;
+    top: 106px;  /* Adjust as necessary */
+    left: 235px; 
+    width: 143px;
+    z-index: 1px;
+}
+.istanbul {
+    position: absolute;
+    top: 49px;  /* Adjust as necessary */
+    left: 109px; 
+    width: 90px;
+    z-index: 1px;
+}
+.canakkale {
+    position: absolute;
+    top: 92px;  /* Adjust as necessary */
+    left: -1px; 
+    width: 127px;
+    z-index: 1px;
+}
+.izmir {
+    position: absolute;
+    top: 176px;  /* Adjust as necessary */
+    left: 16px; 
+    width: 154px;
+    z-index: 1px;
+}
+.hatay {
+    position: absolute;
+    top: 338px;  /* Adjust as necessary */
+    left: 466px; 
+    width: 120px;
+    z-index: 1px;
+}
+
+.trabzon {
+    position: absolute;
+    top: 90px;  /* Adjust as necessary */
+    left: 619px; 
+    width: 65px;
+    z-index: 1px;
+}
+.kayseri {
+    position: absolute;
+    top: 200px;  /* Adjust as necessary */
+    left: 422px; 
+    width: 160px;
+    z-index: 1px;
+}
+.mugla {
+    position: absolute;
+    top: 288px;  /* Adjust as necessary */
+    left: 55px; 
+    width: 133px;
+    z-index: 1px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;  /* Adjust as necessary */
+    border: 2px solid #AF9E64;
+}
+.card h2 {
+    color: black;
+    font-family: mainFont;
+    font-size: 2rem;
+    text-align: center;
+}
+.card strong {
+    color: black;
+    font-weight: 500;
+    font-family: paragraphFont;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.card a {
+    color: black;
+    font-family: paragraphFont;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+}
