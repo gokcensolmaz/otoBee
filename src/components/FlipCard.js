@@ -14,41 +14,32 @@ const FlipCard = ({ isFlipped, title, description, buttonText, onFlip }) => {
                 </div>
 
                 <div className="flip-card-back">
-                    <h2>Complete the Form to Begin Your Journey.</h2>
-                    <div className='container'>
-                        <form action="#">
-                            <div className="form-row">
-                                <div className="input-data">
-                                    <input type="text" required />
-                                    <div className="underline"></div>
-                                    <label htmlFor="">First Name</label>
-                                </div>
-                                <div className="input-data">
-                                    <input type="text" required />
-                                    <div className="underline"></div>
-                                    <label htmlFor="">Last Name</label>
-                                </div>
-                                <div className="input-data">
-                                    <input type="text" required />
-                                    <div className="underline"></div>
-                                    <label htmlFor="">Email Address</label>
-                                </div>
-                                <div className="input-data">
-                                    <input type="text" required />
-                                    <div className="underline"></div>
-                                    <label htmlFor="">Website Name</label>
-                                </div>
-                                <div className="form-row submit-btn">
-                                    <div className="input-data">
-                                        <div className="inner"></div>
-                                        <input type="submit" value="submit" />
-                                    </div>
-                                </div>
+                    <h2 className='form-title'>Complete the Form to Begin Your Journey.</h2>
 
-
+                    <form action="#">
+                        <div className="form-row">
+                            <div className="input-data">
+                                <input type="text" required placeholder='First Name' />
+                                <div className="underline"></div>
                             </div>
-                        </form>
-                    </div>
+                            <div className="input-data">
+                                <input type="text" required placeholder='Last Name' />
+                                <div className="underline"></div>
+                            </div>
+                            <div className="input-data">
+                                <input type="text" required placeholder='E-mail' />
+                                <div className="underline"></div>
+                            </div>
+                            <div className="input-data">
+                                <input type="text" required placeholder='Phone Number' />
+                                <div className="underline"></div>
+                            </div>
+                            <div className='button-cont'>
+                                <button type="button" onClick={onFlip}>Cancel</button>
+                                <input type="submit" value="Submit" />
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

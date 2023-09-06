@@ -13,7 +13,12 @@
 .map {
     position: relative;
 }
-
+.branches-direction{
+    color: white;
+    font-family: mainFont;
+    font-size: 2rem;
+    text-align: center;
+}
 .map-image {
     width: 900px;
     height: 450px;

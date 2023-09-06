@@ -4,6 +4,7 @@
     font-size: 62.5%;
 }
 
+
 /* Fonts */
 @font-face {
     font-family: 'paragraphFont';
@@ -131,6 +132,7 @@ main {
 
 .slide {
     display: none;
+    cursor: pointer;
 }
 
 /* Brand Texts*/

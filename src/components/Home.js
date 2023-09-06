@@ -1,6 +1,7 @@
-import React from 'react';
+
 import '../styles/main.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TeslaWhite from '../assets/images/tesla/tesla_white.svg';
 import TeslaGrey from '../assets/images/tesla/tesla_grey.svg';
 import TeslaRed from '../assets/images/tesla/tesla_red.svg';
@@ -24,9 +25,17 @@ import JaguarBlue from '../assets/images/jaguar/jaguar_blue.svg';
 const Home = () => {
     const [slideIndex, setSlideIndex] = useState(0);
 
+    const navigate = useNavigate();
+
+    const handleSlideClick = (brandName) => {
+        navigate(`/${brandName.toLowerCase()}`);
+    }
+
     useEffect(() => {
         const slides = document.getElementsByClassName("slide");
         const dots = document.getElementsByClassName("dot");
+
+
 
         const updateSlides = () => {
             for (let i = 0; i < slides.length; i++) {
@@ -47,11 +56,12 @@ const Home = () => {
     }, [slideIndex]);
 
 
+
     return (
         <main>
-            <div className="slide-container">
-                <div className="slide">
-                    <div className="brand tesla"> TESLA </div>
+            <div className="slide-container" >
+                <div className="slide" onClick={() => handleSlideClick('TESLA')}>
+                <div className="brand tesla" > TESLA </div>
                     <div className="car-container">
                         <img src={TeslaWhite} className="car car1" alt="Tesla White"></img>
                         <img src={TeslaGrey} className="car car2" alt="Tesla Grey"></img>
@@ -60,8 +70,9 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="slide">
-                    <div className="brand porsche"> PORSCHE </div>
+                <div className="slide"onClick={() => handleSlideClick('PORSCHE')}>
+                <div className="brand porsche" > PORSCHE </div>
+
                     <div className="car-container">
                         <img src={PorscheWhite} className="car car1" alt="Porsche White"></img>
                         <img src={PorscheGrey} className="car car2" alt="Porsche Grey"></img>
@@ -70,8 +81,9 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="slide">
-                    <div className="brand maserati"> MASERATI </div>
+                <div className="slide" onClick={() => handleSlideClick('MASERATI')}>
+                <div className="brand maserati" > MASERATI </div>
+
                     <div className="car-container">
                         <img src={MaseratiWhite} className="car car1" alt="Maserati White"></img>
                         <img src={MaseratiGrey} className="car car2" alt="Maserati Grey"></img>
@@ -80,8 +92,9 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="slide">
-                    <div className="brand jaguar"> JAGUAR </div>
+                <div className="slide" onClick={() => handleSlideClick('JAGUAR')}>
+                <div className="brand jaguar" > JAGUAR </div>
+
                     <div className="car-container">
                         <img src={JaguarWhite} className="car car1" alt="Jaguar White"></img>
                         <img src={JaguarGrey} className="car car2" alt="Jaguar Grey"></img>

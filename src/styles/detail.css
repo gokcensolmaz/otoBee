@@ -1,0 +1,39 @@
+.model-bar {
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+.model-bar-item-container {
+    display: flex;
+    margin: 0;
+}
+
+.model-bar-item:first-child {
+    flex: 0 0 50%;  /* Occupy left 50% of the container */
+    display: flex;
+    justify-content: flex-start; /* Align content to the start */
+    align-items: center;
+}
+
+.model-bar-item:last-child {
+    flex: 1;  /* Occupy the remaining space */
+    display: flex;
+    justify-content: flex-start; /* Align content to the start */
+    align-items: center;
+}
+
+.model-bar-item p {
+    font-size: 1.8rem;
+    margin-left: 20px; /* Optional: if you want some spacing after images */
+}
+
+.model-option img {
+    width: 100px;
+    height: auto;
+    display: block;  /* Ensures image takes up space */
+}
+
+.model-detail {
+    margin-top: 30px;
+}
